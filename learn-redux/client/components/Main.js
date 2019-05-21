@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "react-router";
 import PhotoGrid from "./PhotoGrid";
+import Single from "./Single";
 
 class Main extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="App">
         <h1>
           <Link to="/">Reduxstagram</Link>
         </h1>
         <PhotoGrid />
-      </React.Fragment>
+        <Single />
+      </div>
     );
   }
 }
