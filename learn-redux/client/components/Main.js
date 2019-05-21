@@ -10,8 +10,7 @@ class Main extends Component {
         <h1>
           <Link to="/">Reduxstagram</Link>
         </h1>
-        <PhotoGrid />
-        <Single />
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     );
   }
