@@ -6,7 +6,7 @@ import Single from './Single';
 class Main extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="main">
         <h1>
           <Link to="/">Reduxstagram</Link>
         </h1>

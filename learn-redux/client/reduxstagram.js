@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import { Router, Route, IndexRoute, browserHistory } from "react-router";
-import { Provider } from "react-redux";
-import store, { history } from "./store";
-import Main from "./components/Main";
-import PhotoGrid from "./components/PhotoGrid";
-import Single from "./components/Single";
-import "./styles/style.styl";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
+import store, { history } from './store';
+import App from './components/App';
+import PhotoGrid from './components/PhotoGrid';
+import Single from './components/Single';
+import './styles/style.styl';
 
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path="/" component={Main}>
+      <Route path="/" component={App}>
         <IndexRoute component={PhotoGrid} />
         <Route path="/view/:postId" component={Single} />
       </Route>
@@ -19,4 +19,4 @@ const router = (
   </Provider>
 );
 
-ReactDOM.render(router, document.getElementById("root"));
+ReactDOM.render(router, document.getElementById('root'));
